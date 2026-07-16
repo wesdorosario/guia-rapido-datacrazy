@@ -20,13 +20,13 @@
       <p class="subtitle">Integração da API de WhatsApp com o CRM DataCrazy, detalhada passo a passo.</p>
       <div class="meta">
         <span>Versão 1.0</span>
-        <span>Atualizado em 14/07/2026</span>
+        <span>Atualizado em 15/07/2026</span>
       </div>
     </header>
 
     <section class="overview">
       <h2>O que você encontra aqui</h2>
-      <p>Este documento apresenta os principais passos para conectar a API de WhatsApp Oficial Coexistente ao CRM DataCrazy.</p>
+      <p>Este documento apresenta os principais passos para conectar a API de WhatsApp Oficial Coexistente ao CRM DataCrazy, incluindo configuração inicial no CRM, autenticação via Facebook, configuração na Meta Business Suite e finalização da conexão.</p>
     </section>
 
     <section id="sumario" class="toc">
@@ -46,38 +46,212 @@
     <section id="objetivo">
       <h2>1. Objetivo</h2>
       <p>Este guia apresenta, de forma rápida e objetiva, o processo de integração da API de WhatsApp Oficial Coexistente ao CRM DataCrazy.</p>
-      <p><em>Em desenvolvimento</em></p>
     </section>
 
     <section id="sobre-api-whatsapp">
       <h2>2. Sobre a API de WhatsApp</h2>
-      <p>A API de WhatsApp funciona como uma ponte segura entre o seu número de telefone e o CRM DataCrazy. Ela permite que o sistema envie notificações automáticas e receba mensagens dos clientes de forma centralizada, sem a necessidade de usar o aplicativo do WhatsApp no celular para responder.</p>
-      <p><em>Em desenvolvimento</em></p>
+      <p>A API de WhatsApp Oficial Coexistente funciona como uma ponte segura entre o seu número de telefone e o CRM DataCrazy. Ela permite que o sistema envie notificações automáticas e receba mensagens dos clientes de forma centralizada, utilizando a infraestrutura oficial do WhatsApp Business API da Meta.</p>
     </section>
 
     <section id="pre-requisitos">
       <h2>3. Pré-requisitos</h2>
-      <p><em>Em desenvolvimento</em></p>
+      <ul>
+        <li>Acesso de administrador ao CRM DataCrazy;</li>
+        <li>Número de telefone ativo com WhatsApp Business instalado;</li>
+        <li>Conta no Facebook com acesso à Business Manager (BM);</li>
+        <li>Navegador com sessão ativa no Facebook da mesma conta que tem acesso à BM.</li>
+      </ul>
     </section>
 
     <section id="configuracao-da-api">
       <h2>4. Configuração da API</h2>
-      <p><em>Em desenvolvimento</em></p>
+
+      <article>
+        <h3>4.1 Acessando as configurações no CRM DataCrazy</h3>
+        <p>Na tela do seu CRM, siga os passos abaixo:</p>
+        <ul>
+          <li>No canto inferior esquerdo, clique em Configurações;</li>
+          <li>No menu de Configurações mais a direita, clique em Conexões;</li>
+          <li>No canto superior direito, clique em Criar para criar uma nova conexão.</li>
+        </ul>
+        <figure class="figure">
+          <img src="images/1.jpg" alt="Tela de configuração de conexões do CRM DataCrazy">
+          <figcaption>Configurações — Conexões — Criar.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>4.2 Selecionando a opção de WhatsApp Cloud Oficial</h3>
+        <p>Nas opções de API para WhatsApp, selecione "WhatsApp Cloud Oficial" para criar uma conexão de API de WhatsApp oficial.</p>
+        <figure class="figure">
+          <img src="images/2.jpg" alt="Seleção da opção WhatsApp Cloud Oficial">
+          <figcaption>Seleção — WhatsApp Cloud Oficial.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>4.3 Preenchendo os dados da conexão</h3>
+        <p>Preencha as informações necessárias:</p>
+        <ul>
+          <li>Nome da conexão;</li>
+          <li>Código PIN (deve ser o mesmo cadastrado no WhatsApp Business, se não lembrar, pode usar 123456);</li>
+          <li>Escolha a opção "Conexão em Coexistência (BETA)".</li>
+        </ul>
+        <figure class="figure">
+          <img src="images/3.jpg" alt="Preenchimento dos dados da conexão">
+          <figcaption>Preenchimento — nome, PIN e modo de conexão.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>4.4 Autenticando com Facebook</h3>
+        <p>Clique em "Entrar com Facebook" para iniciar o processo de autenticação.</p>
+        <figure class="figure">
+          <img src="images/4.jpg" alt="Botão Entrar com Facebook">
+          <figcaption>Botão — Entrar com Facebook.</figcaption>
+        </figure>
+        <p>Clique em "Continuar" para prosseguir com a autenticação.</p>
+        <figure class="figure">
+          <img src="images/5.jpg" alt="Botão Continuar">
+          <figcaption>Botão — Continuar.</figcaption>
+        </figure>
+        <p>Neste momento, o CRM puxa o Facebook logado no navegador. É importante que seja o mesmo usuário que tenha a Business Manager (BM) na qual queremos conectar o número.</p>
+        <figure class="figure">
+          <img src="images/6.jpg" alt="Tela de seleção da conta Facebook">
+          <figcaption>Seleção da conta Facebook com acesso à BM.</figcaption>
+        </figure>
+      </article>
     </section>
 
     <section id="configuracao-crm-datacrazy">
-      <h2>5. Configuração no CRM DataCrazy</h2>
-      <p><em>Em desenvolvimento</em></p>
+      <h2>5. Configuração na Meta Business Suite</h2>
+
+      <article>
+        <h3>5.1 Iniciando a configuração</h3>
+        <p>Após a autenticação, clique em "Começar" para avançar com a configuração.</p>
+        <figure class="figure">
+          <img src="images/7.jpg" alt="Botão Começar">
+          <figcaption>Botão — Começar.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.2 Selecionando o portfólio empresarial</h3>
+        <p>Nesta etapa, você pode escolher um portfólio empresarial existente ou criar um novo. Após selecionar, clique em "Avançar".</p>
+        <figure class="figure">
+          <img src="images/8.jpg" alt="Seleção do portfólio empresarial">
+          <figcaption>Seleção — portfólio empresarial existente ou novo.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.3 Conectando o aplicativo WhatsApp Business</h3>
+        <p>Clique em "Conecte seu app WhatsApp Business existente" para prosseguir.</p>
+        <figure class="figure">
+          <img src="images/9.jpg" alt="Botão Conecte seu app WhatsApp Business existente">
+          <figcaption>Botão — Conecte seu app WhatsApp Business existente.</figcaption>
+        </figure>
+        <p>Clique em "Avançar" para continuar.</p>
+        <figure class="figure">
+          <img src="images/10.jpg" alt="Botão Avançar">
+          <figcaption>Botão — Avançar.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.4 Configurando o número de telefone</h3>
+        <p>Preencha as informações do número de telefone e clique em "Avançar".</p>
+        <figure class="figure">
+          <img src="images/11.jpg" alt="Preenchimento das informações do número">
+          <figcaption>Preenchimento — informações do número de telefone.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.5 Lendo o QR Code</h3>
+        <p>Agora basta ler o QR Code com o mesmo WhatsApp Business que você colocou o número na etapa anterior.</p>
+        <figure class="figure">
+          <img src="images/12.jpg" alt="QR Code para conexão">
+          <figcaption>QR Code — leitura com WhatsApp Business.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.6 Configurando o fuso horário</h3>
+        <p>Escolha o fuso horário "America/São Paulo" e clique em "Avançar".</p>
+        <figure class="figure">
+          <img src="images/13.jpg" alt="Seleção do fuso horário">
+          <figcaption>Seleção — fuso horário America/São Paulo.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.7 Confirmando as informações</h3>
+        <p>Revise as informações e clique para confirmar.</p>
+        <figure class="figure">
+          <img src="images/14.jpg" alt="Confirmação das informações">
+          <figcaption>Confirmação — revisão das informações.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.8 Aguardando a conexão</h3>
+        <p>Aguarde um momento para realizar a conexão.</p>
+        <figure class="figure">
+          <img src="images/15.jpg" alt="Aguardando conexão">
+          <figcaption>Aguardando — processo de conexão.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>5.9 Concluindo a configuração na Meta</h3>
+        <p>Clique em "Concluir" para finalizar a configuração na Meta Business Suite.</p>
+        <figure class="figure">
+          <img src="images/16.jpg" alt="Botão Concluir">
+          <figcaption>Botão — Concluir.</figcaption>
+        </figure>
+      </article>
     </section>
 
     <section id="validacao-integracao">
       <h2>6. Validação da integração</h2>
-      <p><em>Em desenvolvimento</em></p>
+
+      <article>
+        <h3>6.1 Finalizando a conexão no CRM DataCrazy</h3>
+        <p>Voltando ao painel do CRM DataCrazy, clique em "Finalizar" para terminar a conexão.</p>
+        <figure class="figure">
+          <img src="images/17.jpg" alt="Botão Finalizar no CRM DataCrazy">
+          <figcaption>Botão — Finalizar.</figcaption>
+        </figure>
+        <p>Após finalizar, o número estará devidamente conectado!</p>
+        <figure class="figure">
+          <img src="images/18.jpg" alt="Conexão concluída com sucesso">
+          <figcaption>Conexão — concluída com sucesso.</figcaption>
+        </figure>
+      </article>
+
+      <article>
+        <h3>6.2 Verificando na Business Manager</h3>
+        <p>Você pode conferir na Business Manager (BM) se apareceu uma nova WABA (WhatsApp Business Account) com um número de telefone conectado.</p>
+        <figure class="figure">
+          <img src="images/19.jpg" alt="Nova WABA na Business Manager">
+          <figcaption>Business Manager — nova WABA com número conectado.</figcaption>
+        </figure>
+        <p>Conexão concluída!</p>
+      </article>
+
+      <article>
+        <h3>6.3 Testando a integração</h3>
+        <p>Para testar, envie uma mensagem "Oi" para o número conectado e responda pelo CRM DataCrazy através do chat ao vivo.</p>
+        <p>Verifique se as mensagens estão sendo enviadas e recebidas corretamente tanto pelo WhatsApp quanto pelo CRM DataCrazy.</p>
+        <p>Certifique-se de que as notificações automáticas estão funcionando conforme configurado.</p>
+      </article>
     </section>
 
     <section id="conclusao">
       <h2>7. Conclusão</h2>
-      <p><em>Em desenvolvimento</em></p>
+      <p>Com os passos acima, a integração entre a API Oficial Coexistente e o CRM DataCrazy está concluída: o número do WhatsApp está conectado e pronto para enviar e receber mensagens diretamente pelo CRM.</p>
+      <p>Em caso de dúvidas durante o processo, consulte a documentação oficial do WhatsApp Business API ou entre em contato com o suporte do DataCrazy.</p>
     </section>
 
     <section id="video-de-apoio" class="video-support">
